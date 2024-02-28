@@ -20,7 +20,7 @@ variable "aws_shared_credentials_files_path" {
 variable "aws_ssh_public_key_file_path" {
   type        = string
   description = "Provide your SSH public key file path"
-  default = "~/.ssh/aws"
+  default = "~/.ssh/aws.pub"
 }
 
 variable "aws_ami" {
