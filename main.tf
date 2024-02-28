@@ -25,6 +25,7 @@ resource "aws_instance" "app_server" {
   instance_type = var.aws_instance_type
   key_name      = aws_key_pair.ssh_key.key_name
   subnet_id     = var.aws_subnet_id
+  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
 
   tags = {
     Name = var.aws_instance_tag
