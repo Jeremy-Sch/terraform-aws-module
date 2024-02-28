@@ -24,6 +24,11 @@ module "terraform-aws-module" {
   aws_instance_type = "t3.micro"
   aws_instance_tag = "Terraform"
 }
+
+# Output values from the module
+output "instance_public_ip" {
+  value = module.terraform-aws-module.instance_public_ip
+}
 ```
 
 ### Input Variables
