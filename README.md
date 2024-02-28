@@ -17,7 +17,7 @@ module "terraform-aws-module" {
   aws_region = "eu-west-3"
   aws_profile = "default"
   aws_shared_credentials_files_path = ["~/.aws/profile"]
-  aws_ssh_public_key_file_path = "~/.ssh/aws"
+  aws_ssh_public_key_file_path = "~/.ssh/aws.pub"
   aws_ami = "ami-X"
   aws_vpc_id = "vpc-X"
   aws_subnet_id = "subnet-X"
