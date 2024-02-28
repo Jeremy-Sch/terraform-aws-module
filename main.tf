@@ -1,6 +1,6 @@
 # SSH Public Key
 resource "aws_key_pair" "ssh_key" {
-  key_name   = "jeremy_ssh_key"
+  key_name   = "terraform_ssh_key"
   public_key = file("${var.aws_ssh_public_key_file_path}")
 }
 
