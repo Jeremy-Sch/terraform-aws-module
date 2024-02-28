@@ -17,12 +17,17 @@ module "terraform-aws-module" {
   aws_region = "eu-west-3"
   aws_profile = "default"
   aws_shared_credentials_files_path = ["~/.aws/profile"]
-  aws_ssh_public_key_file_path = "~/.ssh/aws"
+  aws_ssh_public_key_file_path = "~/.ssh/aws.pub"
   aws_ami = "ami-X"
   aws_vpc_id = "vpc-X"
   aws_subnet_id = "subnet-X"
   aws_instance_type = "t3.micro"
   aws_instance_tag = "Terraform"
+}
+
+# Output values from the module
+output "instance_public_ip" {
+  value = module.terraform-aws-module.instance_public_ip
 }
 ```
 
